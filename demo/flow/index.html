@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Cinq expériences interactives pour comprendre comment une intention devient décision, exécution, résultat et évaluation.">
+  <meta property="og:title" content="De l’intention à l’exécution · Darkwood">
+  <meta property="og:description" content="Changez une intention ou son contexte et observez les conséquences dans cinq domaines Darkwood.">
+  <meta property="og:type" content="website"><meta property="og:url" content="https://intent.content.darkwood.com/">
+  <title>Darkwood Flow — Choisir une stratégie d’exécution · Intention</title>
+  <link rel="icon" href="/logo-darkwood.png">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/themes.js" defer></script>
+  <script src="/static.js" type="module"></script></head>
+<body class="theme-light" data-mode="static">
+<script>try{var t=localStorage.getItem('theme');if(['light','dark','sepia'].includes(t))document.body.className='theme-'+t;}catch(e){}</script>
+<a class="skip-link" href="#main">Aller aux démonstrations</a>
+<header class="navbar-top">
+    <a class="header-brand" href="/" aria-label="Darkwood Intention — accueil"><span class="logo-surface"><img src="/logo-darkwood.png" alt="Darkwood" width="36" height="36"></span><span>Atelier Intention</span></a>
+  <div class="top-actions">
+    <a href="https://github.com/darkwood-com/darkwood/tree/main/library/content-darkwood-intent" class="icon-control" aria-label="GitHub — code de Darkwood Intention" title="Voir le projet sur GitHub" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="ui-icon" aria-hidden="true" focusable="false" viewBox="0 0 16 16">
+  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+</svg>
+</a>
+    <button id="theme-switcher" class="icon-control" aria-label="Thème Clair : passer au thème Sombre" title="Thème Clair : passer au thème Sombre"><span id="theme-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ui-icon" aria-hidden="true" focusable="false">
+                    <circle cx="12" cy="12" r="5" />
+                    <line x1="12" y1="1" x2="12" y2="3" />
+                    <line x1="12" y1="21" x2="12" y2="23" />
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                    <line x1="1" y1="12" x2="3" y2="12" />
+                    <line x1="21" y1="12" x2="23" y2="12" />
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                </svg>
+</span></button>
+    <button id="menu-toggle" class="icon-control mobile-only" aria-expanded="false" aria-controls="sidebar" aria-label="Ouvrir le menu" title="Ouvrir le menu"><svg class="ui-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+</button>
+  </div>
+  <span id="theme-status" class="visually-hidden" role="status"></span>
+</header>
+<template id="theme-icons"><span data-theme-icon="light"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ui-icon" aria-hidden="true" focusable="false">
+                    <circle cx="12" cy="12" r="5" />
+                    <line x1="12" y1="1" x2="12" y2="3" />
+                    <line x1="12" y1="21" x2="12" y2="23" />
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                    <line x1="1" y1="12" x2="3" y2="12" />
+                    <line x1="21" y1="12" x2="23" y2="12" />
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                </svg>
+</span><span data-theme-icon="dark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ui-icon" aria-hidden="true" focusable="false">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                </svg>
+</span><span data-theme-icon="sepia"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ui-icon" aria-hidden="true" focusable="false">
+                    <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
+                    <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+                    <line x1="6" y1="1" x2="6" y2="4" />
+                    <line x1="10" y1="1" x2="10" y2="4" />
+                    <line x1="14" y1="1" x2="14" y2="4" />
+                </svg>
+</span></template>
+<div class="app-layout">
+  <aside class="sidebar" id="sidebar" aria-label="Navigation principale">
+    <div class="mobile-menu-heading mobile-only"><span>Explorer l’intention</span><button id="menu-close" class="icon-control" aria-label="Fermer le menu" title="Fermer le menu"><svg class="ui-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m6 6 12 12M6 18 18 6"/></svg>
+</button></div>
+    <nav class="sidebar-nav" aria-label="Les cinq démonstrations">
+      <a href="/" >Vue d’ensemble</a>
+      <p class="nav-caption">Démonstrations</p>
+      <a href="/demo/darkwaar/" ><span>Darkwaar</span><small>Jeu</small></a><a href="/demo/heroclip/" ><span>Heroclip</span><small>Récit</small></a><a href="/demo/djmatyo/" ><span>DJ Matyo91</span><small>Musique</small></a><a href="/demo/flow/" aria-current="page"><span>Darkwood Flow</span><small>R&amp;D</small></a><a href="/demo/uniflow/" ><span>Uniflow</span><small>R&amp;D</small></a>    </nav>
+  </aside>
+  <div class="page-column"><main id="main" tabindex="-1"><nav class="demo-nav" aria-label="Démonstrations"><a href="/">← L’atelier</a><a href="/demo/darkwaar/" >Darkwaar</a><a href="/demo/heroclip/" >Heroclip</a><a href="/demo/djmatyo/" >DJ Matyo91</a><a href="/demo/flow/" aria-current="page">Darkwood Flow</a><a href="/demo/uniflow/" >Uniflow</a></nav>
+<section class="demo-heading"><p class="eyebrow">DARKWOOD FLOW / R&amp;D</p><h1>Choisir une stratégie d’exécution</h1><p>Arbitrer attente, simplicité et nature du travail sans simuler un benchmark.</p></section>
+<section class="workbench"><p class="mode-note">Version navigateur · règles déterministes · aucun service métier contacté</p>
+<div class="intent-stage" aria-label="Transformation de l’intention"><span>Intention</span><span>Contexte</span><span>Décision</span><span>Planification</span><span>Exécution</span><span>Résultat</span><span>Évaluation</span></div>
+  <div class="two-columns"><article><p class="eyebrow">INTENTION ET NATURE DU TRAVAIL</p><label for="flow-intent">Priorité</label><select id="flow-intent"><option value="simple">Minimiser la complexité d’exploitation</option><option value="wait">Réduire le temps d’attente</option></select><label for="flow-work">Travail</label><select id="flow-work"><option value="io">Plusieurs opérations I/O indépendantes</option><option value="cpu">Calculs CPU intensifs</option></select><button id="flow-run">Choisir une stratégie</button></article><article class="result-panel"><p class="eyebrow">DÉCISION PÉDAGOGIQUE</p><h2 id="flow-decision"></h2><p id="flow-reason"></p><p id="flow-limit" class="evaluation"></p></article></div><p class="mode-note">Simulation, pas benchmark. Aucun driver, backend Rust ou exécuteur OpenSwoole n’est créé. Amp/Revolt représente H1 ; les autres pistes restent conditionnées par les capacités et les mesures.</p>
+<p id="storage-status" class="hint" role="status">Les choix sont conservés uniquement dans ce navigateur.</p>
+<noscript><p>Activez JavaScript pour essayer la démonstration. Les explications restent disponibles sans script.</p></noscript>
+<script type="application/json" id="demo-data">{"slug":"flow"}</script>
+</section>
+<aside class="scope">Simulation pédagogique locale. Une exécution techniquement réussie ne garantit pas que son résultat réponde à l’intention initiale.</aside>
+</main><footer><span>Cinq expériences. Une grille pédagogique.</span><span>Sans compte, backend ni API externe.</span></footer></div>
+</div>
+</body>
+</html>
