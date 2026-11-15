@@ -2,11 +2,11 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Cinq expériences interactives pour comprendre comment une intention devient décision, exécution, résultat et évaluation.">
+  <meta name="description" content="Six expériences interactives pour comprendre comment une intention devient décision, exécution, résultat et évaluation.">
   <meta property="og:title" content="De l’intention à l’exécution · Darkwood">
-  <meta property="og:description" content="Changez une intention ou son contexte et observez les conséquences dans cinq domaines Darkwood.">
+  <meta property="og:description" content="Changez une intention ou son contexte et observez les conséquences dans six domaines Darkwood.">
   <meta property="og:type" content="website"><meta property="og:url" content="https://intent.content.darkwood.com/">
-  <title>Uniflow — Du besoin à la définition · Intention</title>
+  <title>Uniflow — De l’intention métier au processus · Intention</title>
   <link rel="icon" href="/logo-darkwood.png">
   <link rel="stylesheet" href="/style.css">
   <script src="/themes.js" defer></script>
@@ -64,17 +64,13 @@
   <aside class="sidebar" id="sidebar" aria-label="Navigation principale">
     <div class="mobile-menu-heading mobile-only"><span>Explorer l’intention</span><button id="menu-close" class="icon-control" aria-label="Fermer le menu" title="Fermer le menu"><svg class="ui-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m6 6 12 12M6 18 18 6"/></svg>
 </button></div>
-    <nav class="sidebar-nav" aria-label="Les cinq démonstrations">
+    <nav class="sidebar-nav" aria-label="Les six démonstrations">
       <a href="/" >Vue d’ensemble</a>
       <p class="nav-caption">Démonstrations</p>
-      <a href="/demo/darkwaar/" ><span>Darkwaar</span><small>Jeu</small></a><a href="/demo/heroclip/" ><span>Heroclip</span><small>Récit</small></a><a href="/demo/djmatyo/" ><span>DJ Matyo91</span><small>Musique</small></a><a href="/demo/flow/" ><span>Darkwood Flow</span><small>R&amp;D</small></a><a href="/demo/uniflow/" aria-current="page"><span>Uniflow</span><small>R&amp;D</small></a>      <p class="nav-caption">Atelier associé</p>
-      <a href="https://memory.content.darkwood.com/"><span>Mémoire</span><small>Ce qui rend la suite possible</small></a>
-      <p class="nav-caption">Référentiel</p>
-      <a href="https://darkwood-com.github.io/darkwood/cards/darkwood-design/"><span>Darkwood Design</span><small>Identité et conventions visuelles</small></a>
-    </nav>
+      <a href="/demo/darkwood/" ><span>Darkwood</span><small>Écosystème</small></a><a href="/demo/flow/" ><span>Flow</span><small>Exécution</small></a><a href="/demo/uniflow/" aria-current="page"><span>Uniflow</span><small>Processus</small></a><a href="/demo/darkwaar/" ><span>Darkwaar</span><small>Jeu</small></a><a href="/demo/heroclip/" ><span>Heroclip</span><small>Récit</small></a><a href="/demo/djmatyo/" ><span>DJ Matyo91</span><small>Musique</small></a>    </nav>
   </aside>
-  <div class="page-column"><main id="main" tabindex="-1"><nav class="demo-nav" aria-label="Démonstrations"><a href="/">← L’atelier</a><a href="/demo/darkwaar/" >Darkwaar</a><a href="/demo/heroclip/" >Heroclip</a><a href="/demo/djmatyo/" >DJ Matyo91</a><a href="/demo/flow/" >Darkwood Flow</a><a href="/demo/uniflow/" aria-current="page">Uniflow</a></nav>
-<section class="demo-heading"><p class="eyebrow">UNIFLOW / R&amp;D</p><h1>Du besoin à la définition</h1><p>Transformer un besoin métier en règles et séquence explicites.</p></section>
+  <div class="page-column"><main id="main" tabindex="-1"><nav class="demo-nav" aria-label="Démonstrations"><a href="/">← L’atelier</a><a href="/demo/darkwood/" >Darkwood</a><a href="/demo/flow/" >Flow</a><a href="/demo/uniflow/" aria-current="page">Uniflow</a><a href="/demo/darkwaar/" >Darkwaar</a><a href="/demo/heroclip/" >Heroclip</a><a href="/demo/djmatyo/" >DJ Matyo91</a></nav>
+<section class="demo-heading"><p class="eyebrow">UNIFLOW / PROCESSUS</p><h1>De l’intention métier au processus</h1><p>Transformer un objectif métier en définition et en opérations explicites.</p></section>
 <section class="workbench"><p class="mode-note">Version navigateur · règles déterministes · aucun service métier contacté</p>
 <div class="intent-stage" aria-label="Transformation de l’intention"><span>Intention</span><span>Contexte</span><span>Décision</span><span>Planification</span><span>Exécution</span><span>Résultat</span><span>Évaluation</span></div>
   <div class="two-columns"><article><p class="eyebrow">BESOIN MÉTIER</p><label for="uni-intent">Intention</label><select id="uni-intent"><option value="register">Préparer une inscription</option><option value="order">Préparer une commande</option></select><label for="uni-context">Contexte</label><select id="uni-context"><option value="complete">Données complètes</option><option value="missing">Information obligatoire absente</option></select><button id="uni-run">Produire la définition</button></article><article class="result-panel"><p class="eyebrow">DÉFINITION CONCISE</p><h2 id="uni-decision"></h2><ol id="uni-steps" class="steps"></ol><p id="uni-evaluation" class="evaluation"></p></article></div><p class="hint">Uniflow persiste réellement des définitions de programme, leur description, leurs données et leur visibilité. Cette séquence locale n’annonce ni moteur durable, ni paiement, ni effet externe.</p>
@@ -83,7 +79,7 @@
 <script type="application/json" id="demo-data">{"slug":"uniflow"}</script>
 </section>
 <aside class="scope">Simulation pédagogique locale. Une exécution techniquement réussie ne garantit pas que son résultat réponde à l’intention initiale.</aside>
-</main><footer><span>Cinq expériences. Une grille pédagogique.</span><span>Sans compte, backend ni API externe.</span></footer></div>
+</main><footer><span>Six expériences. Une grille pédagogique.</span><span>Sans compte, backend ni API externe.</span></footer></div>
 </div>
 </body>
 </html>
