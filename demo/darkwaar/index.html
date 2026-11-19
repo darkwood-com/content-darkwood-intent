@@ -75,7 +75,13 @@
 <section class="workbench"><p class="mode-note">Version navigateur · règles déterministes · aucun service métier contacté</p>
 <div class="intent-stage" aria-label="Transformation de l’intention"><span>Intention</span><span>Contexte</span><span>Décision</span><span>Planification</span><span>Exécution</span><span>Résultat</span><span>Évaluation</span></div>
   <div class="two-columns"><article><p class="eyebrow">INTENTION DU JOUEUR</p><h2>Que voulez-vous accomplir ?</h2><label for="darkwaar-intent">Objectif</label><select id="darkwaar-intent"><option value="explore">Reconnaître la rive</option><option value="carry">Transporter la braise</option></select><label for="darkwaar-context">Information disponible</label><select id="darkwaar-context"><option value="unknown">Carte inconnue</option><option value="known">Route sûre connue</option></select><button id="darkwaar-run">Décider du prochain trajet</button></article><article class="result-panel" aria-live="polite"><p class="eyebrow">RÈGLES ET CONSÉQUENCES</p><h2 id="darkwaar-decision"></h2><dl id="darkwaar-result"></dl></article></div>
-  <div class="aftertrace-card"><img src="/aftertrace/remembered-route.png" alt="Route reconnue dans Aftertrace" width="648" height="1152"><div><h2>Aftertrace, référence réelle</h2><p>L’atelier reprend les intentions « explorer » et « transporter » sans modifier le jeu. Les règles locales expliquent la décision ; elles ne rejouent pas son moteur.</p><video controls preload="metadata" poster="/aftertrace/remembered-route.png"><source src="/aftertrace/teaser.mp4" type="video/mp4"></video><a href="https://darkwaar.com/games/aftertrace">Voir la page officielle sur Darkwaar →</a></div></div>
+  <div class="aftertrace-card"><img src="/aftertrace/remembered-route.png" alt="Route reconnue dans Aftertrace" width="648" height="1152"><div><h2>Aftertrace, référence réelle</h2><p>L’atelier reprend les intentions « explorer » et « transporter » sans modifier le jeu. Les règles locales expliquent la décision ; elles ne rejouent pas son moteur.</p><div data-youtube-id="Mm7xHmnJnKo" data-youtube-title="Aftertrace — teaser de gameplay réel" style="width:100%;max-width:960px">
+  <button type="button" data-youtube-load aria-label="Charger le lecteur YouTube : Aftertrace — teaser de gameplay réel" style="display:block;width:100%;max-width:100%">
+    <img src="/aftertrace/remembered-route.png" alt="" loading="lazy" style="display:block;width:100%;aspect-ratio:16/9;object-fit:contain">    Charger le lecteur YouTube (contenu externe)
+  </button>
+</div>
+<p><a href="https://www.youtube.com/watch?v=Mm7xHmnJnKo" target="_blank" rel="noopener noreferrer">Aftertrace — teaser de gameplay réel — ouvrir sur YouTube ↗</a></p>
+<a href="https://darkwaar.com/games/aftertrace">Voir la page officielle sur Darkwaar →</a></div></div>
 <p id="storage-status" class="hint" role="status">Les choix sont conservés uniquement dans ce navigateur.</p>
 <noscript><p>Activez JavaScript pour essayer la démonstration. Les explications restent disponibles sans script.</p></noscript>
 <script type="application/json" id="demo-data">{"slug":"darkwaar"}</script>
@@ -83,5 +89,23 @@
 <aside class="scope">Simulation pédagogique locale. Une exécution techniquement réussie ne garantit pas que son résultat réponde à l’intention initiale.</aside>
 </main><footer><span>Six expériences. Une grille pédagogique.</span><span>Sans compte, backend ni API externe.</span></footer></div>
 </div>
+<script>/* Darkwood video embeds: no third-party request before an explicit load action. */
+(() => {
+  document.addEventListener('click', (event) => {
+    const button = event.target.closest('[data-youtube-load]');
+    const host = button?.closest('[data-youtube-id]');
+    if (!host || !/^[A-Za-z0-9_-]{11}$/.test(host.dataset.youtubeId)) return;
+    const frame = document.createElement('iframe');
+    frame.src = `https://www.youtube-nocookie.com/embed/${host.dataset.youtubeId}?autoplay=0&playsinline=1`;
+    frame.title = host.dataset.youtubeTitle || 'Vidéo Darkwood';
+    frame.loading = 'lazy';
+    frame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    frame.referrerPolicy = 'strict-origin-when-cross-origin';
+    frame.allowFullscreen = true;
+    frame.style.cssText = 'display:block;width:100%;aspect-ratio:16/9;border:0';
+    host.replaceChildren(frame);
+  });
+})();
+</script>
 </body>
 </html>
